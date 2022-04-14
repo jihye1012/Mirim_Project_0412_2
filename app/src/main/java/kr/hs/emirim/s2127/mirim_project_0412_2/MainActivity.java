@@ -26,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
         Button btnPlus = findViewById(R.id.btn_plus);
         Button btnMinus = findViewById(R.id.btn_minus);
         Button btnMulti = findViewById(R.id.btn_multi);
-        Button btndivide = findViewById(R.id.btn_divide);
-        Button btnmod = findViewById(R.id.btn_mod);
+        Button btnDivide = findViewById(R.id.btn_divide);
+        Button btnMod = findViewById(R.id.btn_mod);
 
         btnPlus.setOnClickListener(btnListener);
         btnMinus.setOnClickListener(btnListener);
         btnMulti.setOnClickListener(btnListener);
-        btndivide.setOnClickListener(btnListener);
+        btnDivide.setOnClickListener(btnListener);
+        btnMod.setOnClickListener(btnListener);
     }
 
     View.OnClickListener btnListener = new View.OnClickListener(){
