@@ -41,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view){
             String edit1Str = edit1.getText().toString();
             String edit2Str = edit2.getText().toString();
-            if(edit1Str.equals("")||edit2Str.equals("")){
-                Toast.makeText(getApplicationContext(),"연산에 필요한 숫자가 입력되지 않았습니다.",Toast.LENGTH_LONG).show();
+            if(edit1Str.equals("")||edit2Str.equals("")) {
+                Toast.makeText(getApplicationContext(),
+                        "연산에 필요한 숫자가 입력되지 않았습니다.",
+                        Toast.LENGTH_LONG).show();
                 return;
             }
             double num1 = Double.parseDouble(edit1Str);
@@ -60,9 +62,19 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_divide:
                     result = num1 / num2;
+                    if(num2==0){
+                        Toast.makeText(getApplicationContext(),
+                                "0으로 나눌 수 없습니다.",
+                                Toast.LENGTH_LONG).show();
+                    }
                     break;
                 case R.id.btn_mod:
                     result = num1 % num2;
+                    if(num2==0){
+                        Toast.makeText(getApplicationContext(),
+                                "0으로 나눌 수 없습니다.",
+                                Toast.LENGTH_LONG).show();
+                    }
                     break;
             }
             textResult.setText(R.string.text_result);
