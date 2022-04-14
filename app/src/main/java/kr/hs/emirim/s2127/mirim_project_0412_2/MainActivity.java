@@ -61,20 +61,22 @@ public class MainActivity extends AppCompatActivity {
                     result = num1 * num2;
                     break;
                 case R.id.btn_divide:
-                    result = num1 / num2;
                     if(num2==0){
                         Toast.makeText(getApplicationContext(),
                                 "0으로 나눌 수 없습니다.",
                                 Toast.LENGTH_LONG).show();
+                        return;
                     }
+                    result = num1 / num2;
                     break;
                 case R.id.btn_mod:
-                    result = num1 % num2;
                     if(num2==0){
                         Toast.makeText(getApplicationContext(),
                                 "0으로 나눌 수 없습니다.",
                                 Toast.LENGTH_LONG).show();
+                        return;
                     }
+                    result = num1 % num2;
                     break;
             }
             textResult.setText(R.string.text_result);
