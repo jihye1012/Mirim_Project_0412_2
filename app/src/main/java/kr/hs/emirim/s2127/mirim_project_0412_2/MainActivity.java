@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnMinus = findViewById(R.id.btn_minus);
         Button btnMulti = findViewById(R.id.btn_multi);
         Button btndivide = findViewById(R.id.btn_divide);
+        Button btnmod = findViewById(R.id.btn_mod);
 
         btnPlus.setOnClickListener(btnListener);
         btnMinus.setOnClickListener(btnListener);
@@ -53,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn_divide:
                     result = num1 / num2;
+                    break;
+                case R.id.btn_mod:
+                    result = num1 % num2;
                     break;
             }
             textResult.setText(R.string.text_result);
